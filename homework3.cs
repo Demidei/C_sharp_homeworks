@@ -1,5 +1,5 @@
 //Задача 19 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-/*
+
 int NumberLenght(int NumberSub1)
 {
     if (NumberSub1>9)
@@ -14,24 +14,26 @@ int NumberLenght(int NumberSub1)
     
 }  
 
-bool IsPalindrome ( int[] NumberSub, int NumberLengthSub)
+bool IsPalindrome ( int[] NumberSub, int positionsub, int NumberLengthSub)
 {
-    bool answerSub=true;
-    int countSub2=0;
-    while (countSub2<(NumberLengthSub/2))
+    if (positionsub<(NumberLengthSub-positionsub-1))
     {
-        if (NumberSub[countSub2]!=NumberSub[NumberLengthSub-1-countSub2])
+        if (NumberSub[positionsub]==NumberSub[NumberLengthSub-positionsub-1])
         {
-        answerSub=false;
-        break;
+            bool answerSub2 = true && IsPalindrome (NumberSub, positionsub+1, NumberLengthSub);
+            return answerSub2;
         }
         else
         {
-            countSub2++;
+            return false;
         }
     }
-    return answerSub;
+    else
+    {
+        return true;
+    }
 }
+
 
 void ArrayFilling (int [] ArraySub, int NumberSub, int NumberLengthSub)
 {
@@ -52,11 +54,12 @@ if (NumberLenght(Number)==1)
 }
 else
 {
-        int [] NumberArray = new int [NumberLenght(Number)];  
+    int [] NumberArray = new int [NumberLenght(Number)];  
+    int PositionNumber = 0;
     ArrayFilling (NumberArray, Number,NumberLenght(Number));
-    Console.WriteLine($"Is palindrome - {IsPalindrome(NumberArray, NumberLenght(Number))} ");
+    Console.WriteLine($"Is palindrome - {IsPalindrome(NumberArray,PositionNumber, NumberLenght(Number))} ");
 }    
-*/
+
 
 //Задача 21 Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 /*
