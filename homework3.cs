@@ -1,5 +1,5 @@
 //Задача 19 Напишите программу, которая принимает на вход пятизначное число и проверяет, является ли оно палиндромом.
-
+/*
 int NumberLenght(int NumberSub1)
 {
     if (NumberSub1>9)
@@ -59,7 +59,7 @@ else
     ArrayFilling (NumberArray, Number,NumberLenght(Number));
     Console.WriteLine($"Is palindrome - {IsPalindrome(NumberArray,PositionNumber, NumberLenght(Number))} ");
 }    
-
+*/
 
 //Задача 21 Напишите программу, которая принимает на вход координаты двух точек и находит расстояние между ними в 3D пространстве.
 /*
