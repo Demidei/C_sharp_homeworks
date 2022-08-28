@@ -88,11 +88,12 @@ Console.WriteLine($"Distance between points is {Distance(X1,X2,Y1,Y2,Z1,Z2)}");
 /*
 void ThirdDegreeList ( int numberSub)
 {
-    if (numberSub!=1)
+    if (numberSub!=1 && numberSub!=-1)
+    if (numberSub>1)
     {
         Console.Write("1, ");
         int countSub = 2;
-        while (count<numberSub)
+        while (countSub<numberSub)
         {
             Console.Write($"{countSub*countSub*countSub}, ");
             countSub++;
@@ -101,8 +102,19 @@ void ThirdDegreeList ( int numberSub)
     }
     else
     {
-        Console.Write("1");
+          Console.Write("-1, ");
+        int countSub = -2;
+        while (countSub>numberSub)
+        {
+            Console.Write($"{countSub*countSub*countSub}, ");
+            countSub--;
+        }
+        Console.Write($"{numberSub*numberSub*numberSub}");
     }        
+    else
+    {
+        Console.Write($"{numberSub}");
+    }
 }
 
 Console.Write(" input number ");
