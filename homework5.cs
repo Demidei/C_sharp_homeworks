@@ -127,7 +127,7 @@ Console.WriteLine($"Difference between max and min is {DiffMaxMin(array)}");
 */
 
 //Четвертая задача семинара
-
+/*
 void ArrayFilling(int [] arraySub1, int positionSub1, int min, int max)
 {
     if(positionSub1>-1)
@@ -168,3 +168,4 @@ int [] newarray = new int [(size/2)+(size%2)];
 ArrayShowing(array);
 NewArrayGeneration (array,newarray);
 ArrayShowing(newarray);
+*/
